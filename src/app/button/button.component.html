@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="xs-col-12">
+      <hr>
+      <button 
+        class="btn btn-primary"
+        (click)="onDisplay()">Display Details</button>
+      <p *ngIf="display">This is content that may or may not be showing right now...</p>
+      <div
+        *ngFor="let count of counter"
+        [ngStyle]="{backgroundColor: count >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-font': count >= 5}"
+        >{{ count }}</div>
+    </div>
+  </div>
+</div>
